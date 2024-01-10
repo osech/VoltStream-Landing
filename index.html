@@ -1,82 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>FIGMA | Макеты для верстки — Верстка страницы</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Volt stream</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/media.css">
 	<meta name="description" content="Макет для верстки сайта был взял с телеграм канала FIGMA | Макеты для верстки">
+	
 </head>
+
 <body>
-		<!-- Начало: Данный блок удалять нельзя -->
-		<style>
-			.maketforfigma{
-				flex: 0 0 auto;
-				/*background: #303b44;*/
-				/*background: #5CDB95;*/
-				background: #313a46;
-				font-weight: bold;
-				display: flex;
-			}
-			.maketforfigma img{
-				border-radius: 10px;
-				margin: 4px 0 0 4px;
-			}
-			.maketforfigma p {
-				/*color: #fff;*/
-				/*color: #05386B;*/
-				color: #98a6ad;
-				text-decoration: none;
-				letter-spacing: .01875rem;
-				font-size: .775rem;
-				padding: 0 10px;
-				line-height: 0.70rem;
-			}
-
-			.maketforfigma p > a {
-				/*color: #08ff00;*/
-				/*color: #EDF5E1;*/
-				color: #bbe4f0;
-				font-weight: bold;
-			}
-			.maketforfigma p > a:hover {
-				/*color: #ffa001*/
-				/*color: #379683*/
-				color: #ffffff
-			}
-
-			.main{
-				flex: 1 0 auto;
-			}
-
-			html{
-				height: 100%;
-			}
-
-			body{
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-				padding: 0;
-				margin: 0;
-			}
-		</style>
-		<div class="maketforfigma">
-			<a href="https://t.me/s/FigmaToHTML" target="_blank">
-				<img src="logo.png">
-			</a>
-			<div>
-				<p>
-					Данная верстка, была реализована пользователем в рамках обучающего телеграм канал <a href="https://t.me/s/FigmaToHTML/2" target="_blank">FIGMA | Макеты для верстки</a>
-				</p>
-				<p>
-					При помощи бота <a href="https://t.me/HtmlCodeForMoney_bot?from_git" target="_blank">FIGMA | 💵 Верстай за деньги</a> пользователь получил оплату за верстку этого сайта и попал в рейтинги сайта
-					<a href="https://maketforfigma.ru" target="_blank">FIGMA — Макеты для верстки</a>
-				</p>
+	
+	<div class="main">
+		<header class="header page_padding">
+			<nav class="navbar">
+				<div class="navbar__logo">
+					<a href="#"><img src="img/volt-logo.svg" alt="volt-stream"></a>
+				</div>
+				<input class="navbar-toggler" type="checkbox">
+				<img src="img/icons/burger-menu.svg" alt="menu" class="navbar-toggler-icon">
+				<div class="navbar-collapse">
+					<ul class="navbar-menu">
+						<li class="navbar-menu__item"><a href="#about" class="navbar-menu__link">О нас</a></li>
+						<li class="navbar-menu__item"><a href="#stages" class="navbar-menu__link">Этапы</a></li>
+						<li class="navbar-menu__item"><a href="#reviews" class="navbar-menu__link">Отзывы</a></li>
+						<li class="navbar-menu__item"><a href="#works" class="navbar-menu__link">Наши работы</a></li>
+						<li class="navbar-menu__item"><a href="#faq" class="navbar-menu__link">Вопрос ответ</a></li>
+					</ul>
+					<div class="feedback-box">
+						<div class="feedback-phone">
+							<div class="feedback__phone-icon">
+								<img src="img/icons/phone.svg" alt="">
+							</div>
+							<a href="tel:+78005554480" class="feedback__phone-number">+7 800 555 44 80</a>
+						</div>
+						<a href="#" class="feedback__link">Заказать обратный звонок</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="body">
+			<div class="first-page page_padding">
+				<div class="cost-calc">
+					<p><span>Рассчитаем стоимость</span> комплектующих и установки
+						<span>системы заземления</span> за 1 день</p>
+					<p class="cost-calc__desc">
+						Получите подробную смету ответив 
+						всего на 5 простых вопросов
+					</p>
+					<button class="cost-calc__btn btn" type="button">Получить расчет</button>
+				</div>
+				<div class="first-page__img">
+					<img src="img/building.png" alt="">
+				</div>
+				<div class="about-us page_white">
+					<ul class="about__list">
+						 <li class="about__item">
+							<img src="img/icons/star.svg" alt="star" class="about__icon">
+							<p class="about__desc">Собственное 
+								производство</p>
+						 </li>
+						 <li class="about__item">
+							<img src="img/icons/shop.svg" alt="star" class="about__icon">
+							<p class="about__desc">Наличие товара
+								на складе</p>
+						 </li>
+						 <li class="about__item">
+							<img src="img/icons/doc.svg" alt="star" class="about__icon">
+							<p class="about__desc">Выдаем всю
+								документацию</p>
+						 </li>
+					</ul>
+				</div>
+			</div>
+			<div class="spec-areas page_white page_padding" id="about">
+				<h2 class="spec-areas__title">Специализируемся
+					на установке заземления 
+					по направлениям
+				</h2>
+				<div class="areas-list">
+					<div class="area">
+						<img src="img/sc.png" alt="" class="area__img">
+						<div class="area__text">
+							<h3 class="area__subtitle">Торговые центры</h3>
+							<ul class="area__desc area__list">
+								<li>Садовый центр Дарвин</li>
+								<li>OBI</li>
+								<li>Тц Вешняки</li>
+								<li>ТЦ Любимый Мичуринский проспект</li>
+							</ul>
+						</div>
+					</div>
+					<div class="area">
+						<img src="img/house.png" alt="" class="area__img">
+						<div class="area__text">
+							<h3 class="area__subtitle">Частные дома</h3>
+							<p class="area__desc">Установили заземления 
+								и молние защиту для 
+								более 2000 домов</p>
+						</div>
+					</div>
+					<div class="area">
+						<img src="img/storage.png" alt="" class="area__img">
+						<div class="area__text">
+							<h3 class="area__subtitle">Складские комплексы</h3>
+							<p class="area__desc">Установили заземление 
+								и молниезащиту для более
+								100 складских комплексов</p>
+						</div>
+					</div>
+					<div class="area">
+						<img src="img/production.png" alt="" class="area__img">
+						<div class="area__text">
+							<h3 class="area__subtitle">Производственные здания</h3>
+							<ul class="area__desc area__list">
+								<li>Завод Renault</li>
+								<li>Завод Майский Чай</li>
+								<li>Завод Хохланд Рус</li>
+								<li>Завод KERAMA MARAZZI</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="example-cost-calc-img">
+				<img src="img/work-example.png" alt="cost-calculation">
+			</div>
+			<div class="work-stages page_white page_padding" id="stages">
+				<h2 class="work-stages__title">Выполняем весь цикл работ<br>
+					от расчета до оформления документации</h2>
+				<div class="stage-list">
+					<div class="stage__item">
+						<p class="stage__disc">Предварительный расчет
+							материалов и стоимости работ</p>
+						<span class="stage__num">01</span>
+					</div>
+					<div class="stage__item">
+						<p class="stage__disc">Бесплатный выезд 
+							инжинера на замер</p>
+						<span class="stage__num">02</span>
+					</div>
+					<div class="stage__item">
+						<p class="stage__disc">Заключение договора</p>
+						<span class="stage__num">03</span>
+					</div>
+					<div class="stage__item">
+						<p class="stage__disc">Предоплата</p>
+						<span class="stage__num">04</span>
+					</div>
+					<div class="stage__item">
+						<p class="stage__disc">Выполнение работ</p>
+						<span class="stage__num">05</span>
+					</div>
+					<div class="stage__item">
+						<p class="stage__disc">Оплата и выдача 
+							исполнительной документации</p>
+						<span class="stage__num">06</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews slider" id="reviews">
+				<h2 class="slider__title">Отзывы о работе с нами</h2>
+				<div class="reviews-slider swiper">
+					<div class="slider__wrapper swiper-wrapper">
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate1.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate2.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate3.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate4.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate5.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="reviews-slider__img">
+								<img src="img/certificate2.png" alt="review">
+							</div>
+						</div>
+					</div>
+					<div class="slider-btn-wrapper">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+			<div class="finished-works slider" id="works">
+				<h2 class="slider__title">Фото готовых работ</h2>
+				<div class="finished-works-slider swiper">
+					<div class="slider__wrapper swiper-wrapper">
+						<div class="slider__slide swiper-slide">
+							<div class="finished-works-slider__img">
+								<img src="img/finished-work1.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="finished-works-slider__img">
+								<img src="img/finished-work2.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="finished-works-slider__img">
+								<img src="img/finished-work3.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="finished-works-slider__img">
+								<img src="img/finished-work4.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="finished-works-slider__img">
+								<img src="img/finished-work1.png" alt="review">
+							</div>
+						</div>
+					</div>
+					<div class="slider-btn-wrapper">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+			<div class="consultation-ordering page_white">
+				<div class="ordering-wrapper">
+					<div class="ordering-pic">
+						<div class="pic-group">
+							<img src="img/volt-red.svg" alt="" class="pic-group__icon1">
+							<img src="img/volt-white.svg" alt="" class="pic-group__icon2">
+							<img src="img/volt-red.svg" alt="" class="pic-group__icon3">
+							<img src="img/engineer.png " alt="" class="pic-group__main-pic">
+						</div>
+					</div>
+					<div class="ordering-form page_padding">
+						<p class="ordering-form__title">Закажите <span>бесплатную консультацию</span> инженера 
+							и получите полный расчет стоимости комплектующих и установки
+						</p>
+						<form action="#" method="get" class="form">
+							<input type="text" placeholder="Ваше имя" class="form__input">
+							<input type="tel" placeholder="Ваш телефон" class="form__input">
+							<button type="submit" class="form__button btn">Заказать</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="certification slider">
+				<h2 class="slider__title">Комплектующие для систем заземления и молниезащиты сертефицированны 
+					в независимых лабораториях</h2>
+				<div class="certification-slider swiper">
+					<div class="slider__wrapper swiper-wrapper">
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+						<div class="slider__slide swiper-slide">
+							<div class="certification-slider__img">
+								<img src="img/certificate01.png" alt="review">
+							</div>
+						</div>
+					</div>
+					<div class="slider-btn-wrapper">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+			<div class="faq page_padding page_white" id="faq">
+				<h2 class="faq__title">Ответы на частые вопросы</h2>
+				<div class="faq-list">
+					<div class="faq-list__col">
+						<div class="faq-item">
+							<input type="checkbox" class="faq-item__input" id="faq_1">
+							<label for="faq_1" class="faq-item__title">Сколько времени потребуется на расчет?</label>
+							<div class="faq-item__text">
+								<p>Время от отправки заявки до готовой сметы 
+									и проекта занимает в среднем 3-5 дней
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<input type="checkbox" class="faq-item__input" id="faq_2">
+							<label for="faq_2" class="faq-item__title">Длительность монтажа для частного дома?</label>
+							<div class="faq-item__text">
+								<p>Время от отправки заявки до готовой сметы 
+									и проекта занимает в среднем 3-5 дней
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="faq-list__col">
+						<div class="faq-item">
+							<input type="checkbox" class="faq-item__input" id="faq_3">
+							<label for="faq_3" class="faq-item__title">Длительность монтажа для частного дома?</label>
+							<div class="faq-item__text">
+								<p>Время от отправки заявки до готовой сметы 
+									и проекта занимает в среднем 3-5 дней
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<input type="checkbox" class="faq-item__input" id="faq_4">
+							<label for="faq_4" class="faq-item__title">Какой материал используется в заземлении?</label>
+							<div class="faq-item__text">
+								<p>Время от отправки заявки до готовой сметы 
+									и проекта занимает в среднем 3-5 дней
+								</p>
+							</div>
+						</div>
+						<div class="faq-item">
+							<input type="checkbox" class="faq-item__input" id="faq_5">
+							<label for="faq_5" class="faq-item__title">Какие способы оплаты принимаете?</label>
+							<div class="faq-item__text">
+								<p>Время от отправки заявки до готовой сметы 
+									и проекта занимает в среднем 3-5 дней
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<!-- Конец -->
-
-		<div class="main">
-			В данном блоке размещается верстка
-		</div>
+		<footer class="footer">
+			<div class="map" id="map"></div>
+			<div class="contacts page_padding">
+				<p class="contacts__title">Свяжитесь с нами <br>
+					или приезжайте в гости <br>
+					на чашечку кофе!
+				</p>
+				<div class="contacts__links">
+					<a href="tel:+78005554480">+7 800 555 44 80</a>
+					<a href="mailto:Info@voltstream.ru">Info@voltstream.ru</a>
+				</div>
+				<p class="contacts__address">Россия, Москва, Ул. Газгольдерная 12 стр. 5</p>
+				<div class="contacts-socials">
+					<a href="https://www.google.com/search?q=instagram&oq=instagram&aqs=chrome..69i57.5375j0j15&sourceid=chrome&ie=UTF-8" class="social__link" target="_blank"></a>
+					<a href="https://www.google.com/search?q=twitter&sca_esv=566281724&sxsrf=AM9HkKk6FyD9hr67R2eo7KtUp6q7N4IAhQ%3A1695047054649&ei=jl0IZYPrJZytwPAP-9eLkAY&gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&oq=twit&gs_lp=Egxnd3Mtd2l6LXNlcnAiBHR3aXQqAggBMgcQIxiKBRgnMhMQLhiDARjHARixAxjRAxiKBRhDMgsQABiABBixAxiDATIHEAAYigUYQzIHEAAYigUYQzIIEAAYgAQYsQMyCxAAGIAEGLEDGIMBMgsQABiABBixAxiDATIIEAAYgAQYsQMyBRAAGIAESLocUPIKWO4RcAF4AZABAJgBS6ABmAKqAQE0uAEByAEA-AEBqAIQwgIHECMY6gIYJ8ICEBAAGIoFGOoCGLQCGEPYAQHCAhkQLhiKBRjHARjRAxjIAxjqAhi0AhhD2AECwgITEC4YigUYsQMYgwEYxwEY0QMYQ8ICDRAAGIoFGLEDGIMBGEPCAgoQABiKBRixAxhDwgIREC4YgAQYsQMYgwEYxwEY0QPCAgcQLhiKBRhDwgILEC4YgAQYsQMYgwHCAggQLhiABBixA-IDBBgAIEGIBgG6BgYIARABGAG6BgYIAhABGAg&sclient=gws-wiz-serp" class="social__link" target="_blank"></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="scripts/slider.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=7ef43503-7ea3-4e82-bfe1-ebc83aa53bfe&lang=ru_RU"></script>
+	<script src="scripts/map.js"></script>
 </body>
+
 </html>

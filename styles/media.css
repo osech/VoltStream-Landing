@@ -1,0 +1,731 @@
+/* media queries ------------------------------------------------------*/
+
+/* tablet --------------------- */
+
+@media (min-width: 840px) {
+    
+    .page_padding {
+        padding-inline: 50px;
+    }
+
+    body {
+        background: var(--main-bg-desktop);
+        background-attachment: fixed;
+    }
+
+/* header, navbar----------- */
+
+    .header {
+        padding-top: 32px;
+    }
+    
+    .navbar__logo {
+        z-index: 1;
+        margin-left: 0;
+        position: absolute;
+        right: 29px;
+        top: 125px;
+    }
+
+    .navbar-toggler,
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar-collapse {
+        position: static;
+        flex-direction: row;
+        background: none;
+        transform: none;
+        height: auto;
+        padding: 0;
+    }
+
+    .navbar-menu {
+        display: flex;
+        text-align: start;
+        font-size: 14px;
+        line-height: 22.4px;
+    }
+
+    .navbar-menu__item {
+        margin-bottom: 0;
+    }
+
+    .navbar-menu__link {
+        padding: 0px;
+        padding-right: 30px;
+    }
+
+    .feedback-phone {
+        line-height: 28.8px;
+        padding-bottom: 0px;
+    }
+
+    .feedback__link {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* body ------------------------------ */
+
+    .body {
+        padding-top: 42px;
+    }
+    
+    .cost-calc {
+        text-align: start;
+        font-size: 24px;
+        line-height: 31.2px;
+        width: 46%;
+    }
+
+    .cost-calc__desc {
+        margin-top: 18px;
+        padding-right: 50px;
+    }
+
+    .cost-calc__btn {
+        margin-top: 26px;
+    }
+
+    .first-page {
+        position: relative;
+    }
+
+    .first-page__img {
+        position: absolute;
+        top: calc(-1 * (15px + 185 * ((100vw - 860px) / 1060)));
+        right: 0;
+        left: 40%;
+    }
+
+    .about-us {
+        background: none;
+        width: 48%;
+        margin: 69px 0 0 0;
+        padding: 0;
+    }
+
+    .about__list {
+        display: flex;
+    }
+
+    .about__item {
+        margin: 0;
+        padding-left: 9px;
+        padding-right: 25px;
+    }
+
+    .about__icon {
+        width: 20px;
+        height: 20px ;
+    }
+
+    .about__desc {
+        margin-top: 10px;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 13.19px;
+    }
+
+    /* second block --- areas of specialisation */
+
+    .spec-areas {
+        padding-block: 56px 50px;
+        text-align: start;
+    }
+
+    .spec-areas__title {
+        width: 45%;
+        margin-bottom: 26px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 31px;
+    }
+
+    .areas-list {
+        justify-items: stretch;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 16px;
+    }
+
+    .area {
+        margin: 0;
+        max-width: 374px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .area__img {
+        object-fit: cover;
+        width: 175px;
+        height: 179px;
+        border-radius: 6px;
+    }
+
+    .area__subtitle {
+        margin: 0;
+    }
+
+    .area__text {
+        margin-left: 20px;
+    }
+
+    .area__desc {
+        margin-top: 13px;
+        padding-inline: 0;
+    }
+
+    .area__list li {
+        display:block;
+        margin-bottom: 9px;
+    }
+
+    .area__list li::after {
+        content: '';
+    }
+
+
+    /*  example img  -----------------------------------------------------------*/
+
+    .example-cost-calc-img {
+        padding: 50px 34px 50px 50px; 
+    }
+
+
+    /*  stages of work ------------------------------------------ */
+
+    .work-stages {
+        padding-block: 50px;
+    }
+
+    .work-stages__title {
+        text-align: start;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+        /* padding-right: 100px; */
+    }
+
+    .stage-list {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: stretch;
+        gap: 20px;
+        padding-top: 25px;
+    }
+
+    .stage__item {
+        margin: 0;
+    }
+
+/*  sliders ---------------------------------------------- */
+
+    .slider__title {
+        text-align: start;
+        font-size: 24px;
+        line-height: 31px;
+        margin: 0 0 25px 0;
+    }
+
+    .certification .slider__title {
+        padding-right: 424px;
+    }
+
+    .slider {
+        position: relative;
+    }
+    
+    .swiper {
+        position: static;    
+    }
+
+    .slider-btn-wrapper {
+        position: absolute;
+        right: 0;
+        top: 26px;
+    }
+
+    .certification .slider-btn-wrapper {
+        top: 53px;
+    }
+
+
+/* consultation-ordering, ordering-form -------------------------------*/
+
+    .consultation-ordering {
+        padding: 65px 50px 50px 50px;
+    }
+
+    .ordering-wrapper {
+        display: flex;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+    }
+
+    .pic-group__icon1,
+    .pic-group__icon3 {
+        min-width: 84px;
+    }
+    
+    .pic-group__icon1 {
+        top: 33px;
+        left: 8px;
+        z-index: -1;
+    }
+    
+    .pic-group__icon2 {
+        display: none;
+    }
+    
+    .pic-group__icon3 {
+        display: block;
+        right: -21px;
+        bottom: -46px;
+        z-index: -1;
+    }
+
+    .pic-group__main-pic {
+        max-width: 225px;
+        margin-top: -46px;
+    }
+
+    .ordering-form.page_padding {
+        border: none;
+    }
+
+    .ordering-form {
+        padding: 30px 40px 0 15px;
+    }
+
+    .ordering-form__title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+    }
+
+    .form {
+        display: flex;
+        padding-top: 24px;
+    }
+
+    .form__input {
+        margin: 0 15px 0 0;
+        padding: 16px 16px;
+    }
+
+    .form__button.btn {
+        padding: 16px 33px;
+        width: auto;
+         
+    }
+
+    /* FAQ block ------------------------------------------- */
+
+    .faq-list {
+        display: flex;
+    }
+
+    .faq-list__col:nth-child(1) {
+        margin-right: 26PX;
+    }
+
+    .faq-item {
+        padding: 19px;
+    }
+
+    .faq__title {
+        text-align: start;
+        font-size: 24px;
+        line-height: 31.2px;
+    }
+
+    .faq-item__title {
+        font-size: 14px;
+    }
+
+    .faq-item__text {
+        font-size: 12px;
+    }
+
+
+
+/* footer, map, contacts */
+
+    .map {
+        height: 441px;
+    }
+
+    .contacts {
+        position: absolute;
+        top: 48px;
+        left: 17px;
+        width: 423px;
+
+        border-radius: 6px;
+
+        padding: 31px 0 31px 33px;
+
+        text-align: start;
+    }
+
+    .contacts__title {
+        font-size: 24px;
+        line-height: 31.2px;
+    }
+
+    .contacts__links {
+        margin-top: 21px;
+    }
+
+    .contacts__address {
+        margin-top: 25px;
+    }
+
+    .contacts-socials {
+        justify-content: start;
+        margin-top: 30px;
+    }
+
+    .social__link:nth-child(1)::before,
+    .social__link:nth-child(2)::after {
+        margin: 0;
+    }
+
+    .social__link:nth-child(2)::after {
+        margin-left: 30px;
+    }
+}
+
+/* desktop --------------------------------------------------------  */
+
+
+@media (min-width: 1440px) {
+
+    .page_padding {
+        padding-inline: 140px;
+    }
+
+/* header--------------------------------- */
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    .navbar__logo {
+        position: static;
+        margin-right: 83px;
+    }
+
+    .navbar__logo img {
+        width: 143px;
+    }
+
+    .navbar-menu {
+        margin-right: 113px;
+        font-size: 18px;
+        line-height: 28.8px;
+    }
+
+    .navbar-menu__link {
+        padding-right: 50px;
+    }
+
+    .feedback__phone-icon img {
+        width: 18px;
+    }
+
+/* body ------------------------------------ */
+
+/*  first block --- about us */
+
+    .body {
+        padding-top: 98px;
+    }
+
+    .cost-calc {
+        font-size: 36px;
+        line-height: 46.8px;
+        width: 45%;
+    }
+
+    .cost-calc__desc {
+        margin-top: 20px;
+        padding-right: 184px;
+        font-size: 20px;
+    }
+
+    .cost-calc__btn {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+
+    .about-us {
+        margin: 100px 0 0 0;
+    }
+
+    .about__item {
+        padding-left: 15px;
+        padding-right: 28px;
+    }
+
+    .about__icon {
+        width: 32px;
+        height: 32px ;
+    }
+
+    .about__desc {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+
+
+/* second block --- areas of specialisation ----------------------*/
+
+    .spec-areas__title {
+        font-size: 32px;
+        line-height: 41.6px;
+        max-width: 500px;
+        margin-bottom: 40px;
+    }
+
+    
+    .areas-list {
+        gap: 60px 16px;
+    }
+    
+    .area {
+        max-width: none;
+    }
+
+    .area__img {
+        width: 230px;
+        height: 240px;
+    }
+
+    .area__text {
+        margin-left: 30px;
+    }
+
+    .area__subtitle {
+        font-size: 24px;
+    }
+
+    .area__desc {
+        font-size: 18px;
+        line-height: 25.2px;
+    }
+
+    .area__list li {
+        list-style: inside;
+        display: list-item;
+        list-style-position: outside;
+        margin: 0 0 12px 18px;
+    }
+
+    .area__desc {
+        margin-top: 20px;
+    }
+
+
+/*  example img  -----------------------------------------------------------*/
+
+    .example-cost-calc-img {
+        padding: 80px 46px;
+    }
+
+
+/*  stages of work ------------------------------------------ */
+
+    .work-stages {
+        padding-block: 80px;
+    }
+
+    .work-stages__title {
+        font-size: 32px;
+        line-height: 41.6px;
+    }
+
+    .stage-list {
+        padding-top: 40px;
+        gap: 40px;
+    }
+
+    .stage__item {
+        width: 360px;
+        height: 120px;
+        /* padding-left: 49px; */
+        padding: 0 52px 0 40px;
+    }
+
+    .stage__item:nth-child(2) {
+        padding-right: 70px;
+    }
+
+    .stage__disc {
+        font-size: 18px;
+        line-height: 29.7px;
+    }
+
+    .stage__num {
+        font-size: 32px;
+        top: 18px;
+        right: 13px;
+    }
+
+
+/*  sliders ---------------------------------------------- */
+
+    .reviews,
+    .certification {
+        margin-top: 80px;
+    }
+
+    .slider {
+        padding: 0 0 80px 140px;
+    }
+
+    .finished-works.slider {
+        padding-top: 0;
+    }
+
+    .slider__title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .certification .slider__title {
+        font-size: 32px;
+        line-height: 41.6px;
+        padding-right: 666px;
+    }
+
+    .reviews-slider__img {
+        width: 260px;
+    }
+
+    .finished-works-slider__img {
+        width: 360px;
+    }
+    
+    .certification-slider__img {
+        width: 260px;
+    }
+
+    .slider-btn-wrapper {
+        top: -14px;
+        right: 140px;
+        margin: 0;
+    }
+
+
+/* consultation-ordering, ordering-form -------------------------------*/
+
+    .consultation-ordering {
+        padding: 80px 140px;
+    }
+
+    .pic-group {
+        margin-left: 42px;
+    }
+
+    .pic-group__main-pic {
+        max-width: 374px;
+        margin-top: -111px;
+    }
+
+    .pic-group__icon1,
+    .pic-group__icon3 {
+        min-width: 129px;
+    }
+
+    .pic-group__icon1 {
+        top: 42px;
+        left: 0;
+    }
+
+    .pic-group__icon3 {
+        right: -16px;
+        bottom: -71px;
+    }
+
+    .ordering-form {
+        padding: 60px 80px 0 26px;
+    }
+
+    .ordering-form__title {
+        font-size: 32px;
+        line-height: 41.6px;
+    }
+
+    .form {
+        padding-top: 40px;
+    }
+
+    .form__input {
+        margin-right: 20px;
+        /* max-width: 200px; */
+    }
+
+    .form__button.btn {
+        width: 100%;
+    }
+
+
+    /* FAQ block ------------------------------------------- */
+
+    .faq {
+        padding-block: 80px 100px;
+    }
+
+    .faq__title {
+        font-size: 32px;
+    }
+
+    .faq-list {
+        margin-top: 40px;
+    }
+
+    .faq-item__title {
+        font-size: 21px;
+    }
+
+    .faq-item__text {
+        font-size: 18px;
+    }
+
+    .faq-item__input:checked ~ .faq-item__text {
+        max-height: 60px;
+        margin-top: 18px;
+    }
+
+
+/* footer, map, contacts */
+
+    .map {
+        height: 600px;
+    }
+
+    .contacts {
+        top: 80px;
+        left: 80px;
+        width: 510px;
+
+        padding: 60px 0 52px 60px;
+    }
+
+    .contacts__title {
+        font-size: 32px;
+        line-height: 41.6px;
+    }
+
+    .contacts__links {
+        margin-top: 25px;
+    }
+
+}
+
